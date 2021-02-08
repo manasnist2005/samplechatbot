@@ -129,6 +129,10 @@ def predict_json():
     #input_data = pd.read_csv(request.files.get("input_file"), header=None)
     #prediction = model.predict(input_data)
     return jsonify({"pedict":y_pred})
+
+@app.route('/test', methods=["GET"])
+def Test():
+	return("Test method")
 	
 if __name__ == '__main__':
     app.run()
